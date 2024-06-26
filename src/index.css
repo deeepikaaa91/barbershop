@@ -1,0 +1,1675 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  width: 100%;
+  /* height: fit-content; */
+  /* overflow-x: hidden; */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.myfont {
+  font-family: "Bona Nova", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 49px;
+  line-height: 49px;
+  color: white;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* ------------------------------------head---------------- */
+.main {
+  /* height: 100vh; */
+  width: 100%;
+  overflow: hidden;
+  /* background-color: blueviolet; */
+}
+.contain {
+  height: 7vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-family: "Barlow Condensed", sans-serif;
+  position: fixed;
+  animation: head 1s 1s both;
+  z-index: 10;
+}
+@keyframes head {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.l2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 7vh;
+  transition: 1s;
+  animation: label 1s 1.3s both;
+}
+@keyframes label {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-0%);
+  }
+}
+.l2:hover {
+  color: yellow;
+  cursor: pointer;
+}
+.l2::before {
+  content: "";
+  height: 0px;
+  transition: 1s;
+}
+
+.l2:hover::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background-color: yellow;
+  bottom: 0;
+}
+.l3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 7vh;
+  transition: 1s;
+  animation: label1 1.5s 1.3s both;
+  /* position: relative; */
+}
+@keyframes label1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.l3:hover {
+  color: yellow;
+  cursor: pointer;
+}
+.l3::before {
+  content: "";
+  height: 0px;
+  transition: 1s;
+}
+
+.l3:hover::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background-color: yellow;
+  bottom: 0;
+}
+.img1 {
+  height: 10vh;
+  width: 4%;
+  padding-top: 24px;
+  animation: logo 1s 1s both;
+}
+@keyframes logo {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-0%);
+  }
+}
+.img1:hover {
+  filter: grayscale();
+}
+.content {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://www.sliderrevolution.com/wp-content/uploads/revslider/barber-shop-first-screen/barber-shop-main-bg.jpg");
+  background-size: cover;
+  color: yellow;
+  /* letter-spacing: 10px; */
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  /* opacity: 0; */
+  animation: img 1s 1.6ns forwards;
+}
+@keyframes img {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.l1 {
+  letter-spacing: 5px;
+  animation: updown 1s 1.3s both;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+
+.head {
+  text-align: center;
+  font-size: 48px;
+  animation: heading 1s 1.5s both;
+}
+@keyframes heading {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pg {
+  width: 30%;
+  font-size: 21px;
+  text-align: center;
+}
+.mypg {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 29px;
+  animation: paragraph 1s 2.2s both;
+  transition: 0.5s;
+}
+@keyframes paragraph {
+  0% {
+    transform: translateY(40%);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+.icon-3 {
+  height: 30px;
+  animation: icon-ani 1s 1.2s both;
+}
+@keyframes icon-ani {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.icon1 {
+  height: 4vh;
+  animation: box5 2s infinite;
+}
+@keyframes box5 {
+  0% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+.content1 {
+  height: 3px;
+  width: 0px;
+  background-color: yellow;
+  transform: translateY(600%);
+ animation: line1 1s 1.3s both;
+  position: absolute;
+  left: 48%;
+}
+@keyframes line1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50px;
+  }
+}
+/* ------------------------------Look------------------------------- */
+.main1 {
+  height: 120vh;
+  width: 100%;
+  /* overflow: hidden; */
+  /* background-color: aquamarine;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.inner-div {
+  height: 100vh;
+  width: 38%;
+  /* background-color: brown;  */
+  overflow: hidden;
+  animation: img-div 1s forwards;
+  position: absolute;
+  left: 150px;
+  z-index: -1;
+}
+.image1 {
+  height: 100vh;
+  width: 75%;
+  object-fit: cover;
+  object-position: center;
+}
+@keyframes img-div {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+.inner-div1 {
+  height: 80vh;
+  /* z-index: 50; */
+  width: 40%;
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inner {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* margin-left: 500px; */
+  transition: 1s;
+  transform: translateX(60%);
+}
+.About-div {
+  height: 2vh;
+  width: 65%;
+  left: 70px;
+  background-color: gold;
+  position: absolute;
+  /* transform: translateX(5%); */
+  animation: about-ani 2s 0.8s;
+}
+@keyframes about-ani {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+.head1 {
+  font-size: 55px;
+  width: 70%;
+  margin-left: 23%;
+  font-family: "Ultra", serif;
+  font-weight: 500;
+  font-style: normal;
+  animation: head-ani 1s 2s;
+}
+@keyframes head-ani {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.pg1 {
+  width: 85%;
+  /* background-color: brown; */
+  font-size: 23px;
+  color: gray;
+  font-family: "Nixie One";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40px;
+  /* transform: translateX(60%); */
+  margin-left: 600px;
+  animation: pg-ani 1s 2.3s;
+}
+@keyframes pg-ani {
+  0% {
+    transform: translateY(100%);
+    /* visibility: hidden; */
+  }
+  100% {
+    transform: translateY(0%);
+    /* visibility: visible; */
+  }
+}
+/* -----------------------------services------------------------ */
+.main2 {
+  height: 100vh;
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  background-image: url("https://www.sliderrevolution.com/wp-content/uploads/revslider/barber-shop-services/barber-shop-services.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.main3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yellow {
+  height: 2vh;
+  width: 30%;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  animation: yellow-ani 1s;
+}
+@keyframes yellow-ani {
+  0% {
+    /* transform: translateX(0%); */
+    /* width: 0%; */
+  }
+  100% {
+    /* transform: translateX(-50%); */
+    /* will-change: -50%; */
+  }
+}
+.black {
+  height: 4vh;
+  width: 9%;
+  background-color: rgba(0, 0, 0, 0.262);
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 250px;
+  text-wrap: nowrap;
+}
+.parent {
+  position: relative;
+  height: 150px;
+  width: 100%;
+}
+.one {
+  /* background-color: yellow; */
+  width: 35%;
+  animation: text-animate 4s;
+  left: 35%;
+  position: absolute;
+  /* animation-timing-function: steps(10, end); */
+  overflow: hidden;
+}
+@keyframes text-animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 35%;
+  }
+}
+.inner-yellow {
+  height: 2vh;
+  width: 30%;
+  background-color: yellow;
+}
+.head2 {
+  color: white;
+  font-size: 60px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: p1 1s 1.9s;
+}
+@keyframes p1 {
+0%{
+  transform: translateY(-30%);
+}
+100%{
+  transform: translateY(0%);
+}  
+}
+
+.pg2 {
+  width: 58%;
+  color: white;
+  font-size: 25px;
+  font-family: "Nixie One";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 37px;
+  text-align: center;
+  animation: pg2-ani 1s 2s;
+}
+@keyframes pg2-ani {
+  0% {
+    transform: translateY(80%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.main4 {
+  height: 30vh;
+  width: 90%;
+  /* background-color: burlywood;  */
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.inner-main {
+  height: 28vh;
+  width: 20%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ico {
+  height: 10vh;
+  width: 23%;
+  animation: ico-Ani 1s 2.3s;
+}
+@keyframes ico-Ani {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.H1 {
+  font-size: 17px;
+  font-family: "Anton", sans-serif;
+  font-weight: 15px;
+  font-style: normal;
+  color: white;
+  animation: h1-ani 1s 2.5s;
+}
+@keyframes h1-ani {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.pg3 {
+  font-family: "Nixie One";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  animation: pg1-ani 1s 2.5s;
+}
+@keyframes pg1-ani {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* ------------------------------Barbers--------------------------------- */
+.main5 {
+  height: 140vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 10px;
+}
+.blank-barbers {
+  height: 120vh;
+  width: 90%;
+  position: relative;
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 10px; */
+}
+.our-barbers {
+  height: 120vh;
+  width: 50%;
+  /* background-color: chocolate;   */
+  background-image: url("https://www.sliderrevolution.com/wp-content/uploads/revslider/barber-shop-barber-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  position: absolute;
+  right: 150;
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  /* left : 600px; */
+  transform: translateX(40%);
+  animation: img-div1 1s  forwards;
+}
+@keyframes img-div1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.YL {
+  height: 10vh;
+  width: 50%;
+  display: flex;
+  /* position: relative; */
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: brown; */
+  gap: 15px;
+  letter-spacing: 5px;
+  align-self: flex-start;
+}
+.Y {
+  height: 2vh;
+  width: 38%;
+  right: 62%;
+  background-color: yellow;
+  animation: line 1.5s;
+  position: absolute;
+  /* right: 150px; */
+}
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 38%;
+  }
+}
+.L {
+  font-size: 17px;
+  margin-left: 80%;
+}
+.H {
+  font-size: 60px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  transform: translateX(12%);
+  animation: sss 1s 1s;
+}
+@keyframes sss {
+  0%{
+   transform: translateY(-30%);
+  } 
+  100%{
+   transform: translateY(-0%);
+  }
+ }
+.P {
+  display: flex;
+  flex-direction: column;
+  font-family: "Nixie One";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 33px;
+  font-size: 25px;
+}
+.p5{
+ animation: pr-4 1s 1.7s; 
+}
+@keyframes pr-4 {
+ 0%{
+  transform: translateX(100%);
+ }
+ 100%{
+  transform: translateX(0%);
+} 
+}
+.p6{
+  animation: pr-4 1s 1.9s; 
+ }
+ @keyframes pr-4 {
+  0%{
+   transform: translateX(100%);
+  }
+  100%{
+   transform: translateX(0%);
+ } 
+ }
+ .p7{
+  animation: pr-4 1s 2.1s; 
+ }
+ @keyframes pr-4 {
+  0%{
+   transform: translateX(100%);
+  }
+  100%{
+   transform: translateX(0%);
+ } 
+ }
+ 
+ 
+.img-div {
+  height: 50vh;
+  width: 80%;
+  /* background-color: burlywood;  */
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(20%);
+}
+.A img {
+  height: 35vh;
+  width: 100%;
+}
+.A {
+  /* background-color: red; */
+  height: 50vh;
+  width: 25%;
+}
+.A h1 {
+  font-size: 20px;
+  font-family: "Anton", sans-serif;
+  font-weight: 15px;
+  font-style: normal;
+  color: black;
+  text-align: center;
+}
+.A p {
+  text-align: center;
+  font-family: "Nixie One";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 30px;
+}
+/* -----------------------------------Addresss--------------------------- */
+.main6 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* overflow: hidden; */
+}
+.location-img {
+  height: 90vh;
+  width: 40%;
+  overflow: hidden;
+  background-color: blueviolet;
+}
+.Address {
+  height: 90vh;
+  width: 40%;
+  /* background-color: burlywood; */
+}
+.Add {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding-left: 50px;
+  gap: 10px;
+}
+.row {
+  height: 2vh;
+  width: 30%;
+  left: 60%;
+  background-color: yellow;
+  position: absolute;
+ animation: roww 1s ;
+}
+@keyframes roww {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%
+  
+  }
+}
+.lab {
+  letter-spacing: 5px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 22px;
+  font-style: normal;
+}
+.box {
+  height: 32vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: center;
+  padding-left: 40px;
+}
+.a {
+  font-size: 45px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: headd 1s 1.3s;
+}
+@keyframes headd {
+ 0%{
+  transform: translateX(20%);
+ } 
+ 100%{
+  transform: translateX(0%);
+
+ }
+}
+.e {
+  font-size: 45px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: headd1 1s 1.9s;
+}
+@keyframes headd1 {
+ 0%{
+  transform: translateX(20%);
+ } 
+ 100%{
+  transform: translateX(0%);
+
+ }
+}
+.l {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  animation: headd2 1s 1.6s;
+}
+@keyframes headd2 {
+  0%{
+   transform: translateY(100%);
+  } 
+  100%{
+   transform: translateY(0%);
+ 
+  }
+ }
+.box1 {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+}
+.l-1 {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  animation: headd3 1s 2.3s;
+
+}
+@keyframes headd3 {
+  0%{
+   transform: translateY(40%);
+  } 
+  100%{
+   transform: translateY(0%);
+ 
+  }
+ }
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+}
+.l-2 {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  animation: headd4 1s 2.6s;
+}
+@keyframes headd4 {
+  0%{
+   transform: translateY(40%);
+  } 
+  100%{
+   transform: translateY(0%);
+ 
+  }
+ }
+
+/* ----------------------------------Local-Barbers-------------------------- */
+.main7 {
+  height: 52vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.img2 {
+  height: 10vh;
+  width: 50px;
+  transform: translateY(-24%);
+  animation: logo2 1s;
+}
+@keyframes logo2 {
+  0% {
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-24%);
+    opacity: 1;
+  }
+}
+
+.s1 {
+  color: yellow;
+  font-size: 30px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: local 1s 1.5s;
+}
+@keyframes local {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.s2 {
+  color: white;
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  width: 40%;
+  text-align: center;
+  animation: barbers 1s 1.8s;
+}
+@keyframes barbers {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.btn1 {
+  color: yellow;
+  display: flex;
+  gap: 40px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.bt {
+  animation: bar 1s 2s;
+}
+@keyframes bar {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.bt:hover {
+  cursor: pointer;
+  color: white;
+}
+.bt1:hover {
+  cursor: pointer;
+  color: white;
+}
+.bt1 {
+  animation: bar1 1s 2.5s;
+}
+@keyframes bar1 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.bt2 {
+  animation: bar2 1s 3s;
+}
+@keyframes bar2 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.bt2:hover {
+  cursor: pointer;
+  color: white;
+}
+.bt3 {
+  animation: bar3 1s 3.3s;
+}
+@keyframes bar3 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.bt3:hover {
+  cursor: pointer;
+  color: white;
+}
+.icon2 {
+  color: white;
+  display: flex;
+  gap: 20px;
+  animation: face 1s 3.9s;
+}
+@keyframes face {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.linear {
+  background: -webkit-linear-gradient(purple, rgba(255, 0, 0, 0.499));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.button-col:hover {
+  background-color: aqua;
+  transition: 1s;
+}
+.linear-g {
+  font-size: 95px;
+  background: -webkit-linear-gradient(purple, rgba(255, 0, 0, 0.499));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+ 
+.linear-col{
+  background-image: linear-gradient(to right, rgba(0, 0, 255, 0.838) , rgb(225, 9, 45));
+}
+.class:hover{
+background-color: rgba(0, 255, 255, 0.73);
+transform: scale(1.1);
+}
+.color:hover{
+background-color: brown; 
+}
+
+.img8 {
+ height: 50vh;
+ width: 100%; 
+ object-fit: cover;
+ object-size: center;
+ border-radius: 30px;
+}
+.inner-div6:hover{
+transform: scale(1.1);
+}
+.inner-div6{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  width: 20%;
+  border: 2px solid gray;
+  border-radius: 30px;
+  padding-bottom: 10px;
+  transition: 1s;
+
+}
+.divvv{
+  height: 150vh;
+  width: 100%;
+ display: flex; 
+ flex-direction: column;
+ justify-content:center;
+ align-items: center;
+ gap: 20px;
+ flex-wrap: wrap;
+ 
+}
+.inner-div6 p {
+ font-size: 25px;
+ font-weight: bold; 
+ text-align: center;
+}
+span{
+  font-weight: normal;
+}
+.ADDTO{
+height: 5vh;
+width: 70%;
+background-color: burlywood;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 30px;
+font-weight: bold;
+}
+.ADD{
+  height: 80vh;
+  width: 100%;
+}
+.ADD h1{
+font-size: 30px;
+font-weight: bold;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.bar{
+  display: none;
+}
+
+
+
+/* -----------------------------------Responsive---------------------------- */
+@media (max-width: 600px) {
+
+.contain {
+    height: 7vh;
+    width: 100%;
+    background-color: transparent;
+    gap: 50px;
+   
+  }
+   .bar{
+    height: 50px;
+    width: 50px;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(300%);
+    flex-direction: column;
+    gap: 4px;
+  }
+  .bar1{
+    height: 2px;
+    width: 20px;
+    background-color: white;
+  }
+  .l2 {
+    display: none;
+    height: 7vh;
+  }
+    .l3 {
+    display: none;
+    height: 7vh;
+    }
+
+   .img1 {
+    height: 9vh;
+    width: 12%;
+    position: absolute;
+    padding-top: 8px;
+    transform: translateX(50%);
+   
+  }
+  .content {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    color: yellow;
+    }
+ 
+  .pg {
+    width: 88%;
+    }
+
+
+
+/* ----------------------------------look-------------------------------     */
+.main1 {
+  height: 60vh;
+  width: 100%;
+  /* overflow: hidden; */
+  /* background-color: aquamarine;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transform: translateY(40%);
+}
+
+.inner-div {
+  height: 60vh;
+  width: 38%;
+  /* background-color: brown;  */
+  overflow: hidden;
+  animation: img-div 1s forwards;
+  position: absolute;
+  left: 150px;
+  z-index: -1;
+}
+.image1 {
+  height: 100vh;
+  width: 75%;
+  object-fit: cover;
+  object-position: center;
+  display: none;
+}
+
+.inner-div1 {
+  height: 60vh;
+  /* z-index: 50; */
+  width: 100%;
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-40%);
+  align-items: center;
+}
+.inner {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* margin-left: 500px; */
+  transition: 1s;
+  transform: translateX(60%);
+}
+.inner label{
+transform: translateX(-100%);
+}
+.About-div {
+  display: none;
+}
+
+.head1 {
+  font-size: 45px;
+  width: 90%;
+  text-align: center;
+  transform: translateX(-10%);  
+}
+.pg1 {
+  /* background-color: brown; */
+  font-size: 23px;
+  color: black;
+  width: 93%;
+  font-family: "Nixie One";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40px;
+  margin-left: 0px;
+  text-align: center;
+}
+/* ---------------------------------services--------------------------- */
+.main2 {
+  height: 150vh;
+  width: 100%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  background-image: url("https://www.sliderrevolution.com/wp-content/uploads/revslider/barber-shop-services/barber-shop-services.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.main3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yellow {
+display: none;
+}
+.black {
+  height: 4vh;
+  width: 9%;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 3px;
+  width: 250px;
+  text-wrap: nowrap;
+}
+.parent {
+  position: relative;
+  height: 150px;
+  width: 100%;
+}
+.one {
+  width: 35%;
+  animation: text-animate 4s;
+  left: 35%;
+  position: absolute;
+  overflow: hidden;
+}
+.inner-yellow {
+display: none;
+}
+.head2 {
+  color: white;
+  font-size: 45px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pg2 {
+  width: 90%;
+  color: white;
+  font-size: 20px;
+  font-family: "Nixie One";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 37px;
+  text-align: center;
+}
+
+.main4 {
+  height: 100vh;
+  width: 90%;
+  /* background-color: burlywood;  */
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.inner-main {
+  height: 20vh;
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ico {
+  height: 10vh;
+  width: 20%;
+}
+.H1 {
+  font-size: 20px;
+  font-family: "Anton", sans-serif;
+  font-weight: 15px;
+  font-style: normal;
+  color: white;
+  text-align: center;
+}
+.pg3 {
+  font-family: "Nixie One";
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+/* ----------------------------------------barbers------------------------  */
+.main5 {
+  height: 180vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 10px;
+}
+.blank-barbers {
+  height: 180vh;
+  width: 90%;
+  position: relative;
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.our-barbers {
+  height: 180vh;
+  width: 100%;
+  /* background-color: chocolate;   */
+  background-image: url("https://www.sliderrevolution.com/wp-content/uploads/revslider/barber-shop-barber-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  position: absolute;
+  right: 150;
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  /* left : 600px; */
+  transform: translateX(40%);
+  display: none;
+}
+
+.YL {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  /* position: relative; */
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: brown; */
+  gap: 15px;
+  letter-spacing: 5px;
+  align-self: flex-start;
+}
+.Y {
+  height: 100vh;
+  width: 38%;
+  right: 62%;
+  display: none;
+  background-color: yellow;
+  position: absolute;
+  /* right: 150px; */
+}
+.L {
+  font-size: 17px;
+  margin-left: 80%;
+}
+.H {
+  font-size: 45px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  transform: translateX(0%);
+}
+.P {
+  display: flex;
+  flex-direction: column;
+  font-family: "Nixie One";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 30px;
+  font-size: 20px;
+   text-align: center;
+}
+ 
+ 
+.img-div {
+  height: 140vh;
+  width: 120%;
+  /* background-color: burlywood;  */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(0%);
+}
+.A img {
+  height: 30vh;
+  width: 100%;
+}
+.A {
+  /* background-color: red; */
+  height: 50vh;
+  width: 60%;
+  
+}
+.A h1 {
+  font-size: 20px;
+  font-family: "Anton", sans-serif;
+  font-weight: 15px;
+  font-style: normal;
+  color: black;
+  text-align: center;
+}
+.A p {
+  text-align: center;
+  font-family: "Nixie One";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 25px;
+}
+/* ------------------------------------------Address------------------------- */
+.main6 {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* overflow: hidden; */
+}
+.location-img {
+  height: 90vh;
+  width: 40%;
+  overflow: hidden;
+  display: none;
+  background-color: blueviolet;
+}
+.Address {
+  height: 90vh;
+  width: 40%;
+  /* background-color: burlywood; */
+}
+.Add {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding-left: 50px;
+  gap: 10px;
+}
+.row {
+  height: 2vh;
+  width: 30%;
+  left: 60%;
+  background-color: yellow;
+  position: absolute;
+  display: none;
+}
+.lab {
+  letter-spacing: 5px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 22px;
+  font-style: normal;
+}
+.box {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 0px;
+  width: 110%;
+}
+.a {
+  font-size: 32px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.e {
+  font-size: 30px;
+  font-family: "Ultra", serif;
+  font-weight: 300;
+  font-style: normal;
+  width: 200%;
+  text-align: center;
+}
+.l {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
+  width: 110%;
+}
+.box1 {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  align-items: center;
+}
+.l-1 {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  width: 120%;
+  text-align: center;
+
+}
+.box3 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  align-items: center;
+}
+.l-2 {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  width: 160%;
+  text-align: center;
+}
+/* --------------------------------localbarber----------------------- */
+.main7 {
+  height: 52vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.img2 {
+  height: 70px;
+  width: 45px;
+  transform: translateY(-70%);
+  animation: logo2 1s;
+}
+@keyframes logo2 {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-0%);
+    opacity: 1;
+  }
+}
+
+.s1 {
+  color: yellow;
+  font-size: 30px;
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.s2 {
+  color: white;
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  width: 98%;
+  text-align: center;
+  animation: barbers 1s 1.8s;
+}
+@keyframes barbers {
+  0% {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+}
